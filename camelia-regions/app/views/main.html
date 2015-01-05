@@ -1,0 +1,48 @@
+<cm:dataGrid var="row" value="dataModel" id="monTableau"
+	style="width: 800px; height:400px" selectable="true"
+	selectionCardinality="*" rows="90" selection="mySelection"
+	cursor="myCursor">
+	
+	<!-- Dont specify attribute "rows" more than 90, heroku will reject it ! -->
+	
+	<cm:dataColumn id="ville" title="Ville" value="{{row.VILLE}}"
+		width="150px" resizeable="true" sorter="VILLE"
+		criteriaExpression="VILLE">
+		<cm:template name="label">
+			<label>{{row.editor.name}}</label>
+		</cm:template>
+
+		<cm:criteria type="Alphabetic" ignoreCase="true"></cm:criteria>
+		<cm:criteria type="RegExp" name="Test" value="/\/\-\$"
+			ignoreCase="true"></cm:criteria>
+
+	</cm:dataColumn>
+	<cm:dataColumn id="cp" title="Code postal" value="{{row.CP}}"
+		cellAlign="right" minWidth="108px" maxWidth="220px" resizeable="true"
+		sorter="CP">
+
+	</cm:dataColumn>
+	<cm:dataColumn id="departement" title="Département"
+		value="{{row.NOMADMIN2}}" resizeable="true" width="180px"
+		sorter="NOMADMIN2">
+
+		<cm:criteria type="Alphabetic" ignoreCase="true"></cm:criteria>
+
+	</cm:dataColumn>
+	<cm:dataColumn id="codeDepartement" title="Numéro département"
+		value="{{row.CODEADMIN2}}" cellAlign="right" resizeable="true"
+		width="80px">
+
+		<cm:criteria type="Alphabetic" ignoreCase="true"></cm:criteria>
+	</cm:dataColumn>
+
+	<cm:dataColumn id="region" title="Région" value="{{row.NOMADMIN1}}"
+		width="180px" resizeable="true" sorter="NOMADMIN1">
+
+		<cm:criteria type="Alphabetic" ignoreCase="true"></cm:criteria>
+
+	</cm:dataColumn>
+
+</cm:dataGrid>
+
+<cm:pager for="monTableau"></cm:pager>
