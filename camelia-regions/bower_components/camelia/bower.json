@@ -1,0 +1,33 @@
+{
+	"author": "Olivier Oeuillot",
+  "name": "Camelia",
+  "version": "0.0.10",
+  "homepage": "http://github.com/Vedana/camelia",
+  "keywords": [
+               "css",
+               "js",
+               "angular",
+               "table",
+               "datagrid",
+               "grid"
+             ],
+  "main": ["./dist/camelia.js", "./dist/camelia.css" ],
+  "dependencies": {
+    "angular": "1.2.15",
+    "angular-resource": "1.2.15",
+    "angular-sanitize": "1.2.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Vedana/camelia.git"
+  },
+  "ignore": [
+    ".*",
+    "Gruntfile.js",
+    "kerma*.js",
+    "package.json",
+    "test",
+    "src",
+    "node_modules",
+    "examples"
+  ]}
