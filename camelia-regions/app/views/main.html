@@ -1,10 +1,9 @@
 <cm:dataGrid var="row" value="dataModel" id="monTableau"
 	style="width: 800px; height:400px" selectable="true"
-	selectionCardinality="*" rows="90" selection="mySelection"
-	cursor="myCursor">
-	
+	selectionCardinality="*" rows="90">
+
 	<!-- Dont specify attribute "rows" more than 90, heroku will reject it ! -->
-	
+
 	<cm:dataColumn id="ville" title="Ville" value="{{row.VILLE}}"
 		width="150px" resizeable="true" sorter="VILLE"
 		criteriaExpression="VILLE">

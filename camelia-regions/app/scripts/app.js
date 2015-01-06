@@ -14,8 +14,7 @@ angular
 					'ngRoute',
 					'camelia.directives.grid',
 					'camelia.directives.pager',
-					'camelia.criteria',
-					'ngResource' ]).config(function($routeProvider) {
+					'camelia.criteria' ]).config(function($routeProvider) {
 			$routeProvider.when('/', {
 				templateUrl: 'views/main.html',
 				controller: 'MainCtrl'
